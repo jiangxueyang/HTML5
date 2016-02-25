@@ -69,9 +69,10 @@ num此时的值为11;
 * Math.ceil() 向上取整
 * Math.floor() 向下取整
 
-八、switch语句
+八、循环语句
 ---
-语法：
+
+#####switch语法
 >switch(expresion){
     case 1:
       expresion1
@@ -87,6 +88,8 @@ num此时的值为11;
 * case：当符合条件时，会从符合条件的那一条case语句开始，依次执行,每一个条件均用恒等于判断。
 * break：语句可跳出switch语句或循环语句。
 * default：当以上条件均不满足时，将会执行default中的语句
+
+#####while语法
 
 
 ####扩展知识
