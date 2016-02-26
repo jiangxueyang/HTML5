@@ -92,6 +92,13 @@ num此时的值为11;
 #####while语法
 
 
+
+
+
+
+
+
+
 ####扩展知识
 * 用JS将一个div隐藏：<object data="" type="" class="style "\></object\>  display="none"
 * 取整(把字符串转换成数字的常用方法)：parseInt( )或parseFloat( )
@@ -102,5 +109,5 @@ num此时的值为11;
   value可以取输入框或下拉列表中的值，一般用于表单元素的获取；
   而innerHTML 则用于获取html中其他标签内的内容
 * 执行函数：check() //check()为函数名。
-* chrome浏览器中，F12→sources 展开文件，在行上**添加断点**（单击可添加） 。添加断点后，之后的代码在页面将不会执行。
+* chrome浏览器中，F12→sources 展开文件，在行上**添加断点**（单击可添加）。添加断点后，之后的代码在页面将不会执行。
 * 获取当前的日期 var now = new Date();
