@@ -11,4 +11,5 @@ JaveScript知识合集
 * [function](js/function.md)
 * [string](js/string.md)
 * [math](js/math.md)
-* [event](js/commonfn.js)
+* [event](js/event.js)
+* [commonfn](js/commonfn.js)
