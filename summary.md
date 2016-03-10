@@ -2,7 +2,7 @@
 
 
 JaveScript知识合集
-* [baseKnowledge](js/baseKnowledge.md)
+* [baseKnowledge](js/basicKnowledge.md)
 * [arr](js/arr.md)
 * [element](js/element.md)
 * [BOM](js/BOM.md)
