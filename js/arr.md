@@ -20,14 +20,15 @@
 
 ####数组方法
 
-+ push():往数组最后加入内容；arr.push(内容)
-+ unShift():往数组最前面加入内容；
-+ pop():删除数组最后面一个元素；
-+ shift():删除数组第一个元素；
++ push():往数组最后加入内容；arr.push(内容) 返回加入的内容 
++ unShift():往数组最前面加入内容；返回加入的内容
++ pop():删除数组最后面一个元素；返回新数组的长度
++ shift():删除数组第一个元素；返回新数组的长度
 + splice(start,deleteNum,items)：添加、删除
     + star:从哪个索引开始
     + deleteNum: 删除个数
     + items:添加的内容
+    + var b=a.splice(4,1);//返回被删除的元素。b也会变化 
 + slcie(start,end):返回数组的片段或子数组。从start开始，到end( 
   不包括end对应的元素)
 + join("隔开符"):把数组转换成字符串
@@ -40,9 +41,64 @@
 + reverse()：将数组进行倒序 arr.reverse()
 + concat()返回一个新数组，这个数组是由两个数组合并而成的
     arr.concat(arr1)
-+ ES5新方法：
-    forEach(val,idx,arr):
++ **ES5新方法//IE8及以下浏览器不支持**
+    + forEach(val,idx,arr): 遍历数组
+      var arr=[1,2,3,4,5];
+      arr.forEach(function(val,i){
+         console.log(val);
+      })
+    + map 会生成一个新的数组 
+      var arr2=arr.map(function(val,i){
+         return val*val
+      });
+    + filter 过滤数组，会返回一个数组
+      var arr3=arr.filter(function(val,i){
+        return val<4;
+      })
+    + indexOf() 从头开始查找字符对的索引值
+      arr.indexOf(3) ==>2 
+      arr.indexOf(8) ==>-1 //查找不存在的元素返回-1
+    + lastIndexOf()从最后开始查找字符
+    + Array.isArray()//判断是否为数组
+      Array.isArray(arr) 返回布尔值
 
+
+####冒泡排序 (面试问题)
+function sort(elements){
+ for(var i=0;i< elements.length-1;i++){
+  for(var j = 0; j< elements.length-i-1;j++){
+   if(elements[j]>elements[j+1]){
+      var swap=elements[j];
+      elements[j]=elements[j+1];
+      elements[j+1]=swap;
+   }
+  }
+ }
+}
+
+####快速排序(面试问题)
+var a=[85, 24, 63, 45, 17, 31, 96, 50]
+ function quickSort(arr){
+  
+  if(arr.length<=1){
+    return arr;
+  }
+  else{
+    var pivotIndex=Math.floor(arr.length/2);
+    var pivot=arr.splice(pivotIndex,1)[0];
+    var left =[];
+    var right=[];
+    for(var i=0;i<arr.length;i++){
+      if(arr[i]<pivot){
+        left.push(arr[i]);
+      }
+      else{
+        right.push(arr[i])
+      }
+    }
+  }
+  return arguments.callee(left).concat([pivot], arguments.callee(right));
+}
 
 
 

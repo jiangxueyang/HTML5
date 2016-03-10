@@ -63,11 +63,12 @@ num此时的值为11;
 七、Math
 ---
 * Math.random() 获取随机数
-  得到一个0~1但不等于1的随机数
-  得到一个1~100的随机数：parseInt(Math.random()*100)+1
+  得到一个0~1但不等于1的随机数parseInt(Math.random()*100)
+  得到一个1~100的随机数：parseInt(Math.random()*100+1)
 * Math.round() 取整（四舍五入）
 * Math.ceil() 向上取整
 * Math.floor() 向下取整
+* pareInt()向下取整，同时会将数字后的字符串去掉。
 
 八、循环语句
 ---
@@ -91,14 +92,6 @@ num此时的值为11;
 
 #####while语法
 
-
-
-
-
-
-
-
-
 ####扩展知识
 * 用JS将一个div隐藏：<object data="" type="" class="style "\></object\>  display="none"
 * 取整(把字符串转换成数字的常用方法)：parseInt( )或parseFloat( )
@@ -111,3 +104,6 @@ num此时的值为11;
 * 执行函数：check() //check()为函数名。
 * chrome浏览器中，F12→sources 展开文件，在行上**添加断点**（单击可添加）。添加断点后，之后的代码在页面将不会执行。
 * 获取当前的日期 var now = new Date();
+* **三元运算（三目运算）**
+  a= 条件?x:y
+  若条件成立，则a=x;否则 a=y;
