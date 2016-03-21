@@ -14,3 +14,4 @@
 * [event](js/event.js)
 * [commonfn](js/commonfn.js)
 * [ajax](js/ajax.md)
+* [regExp](js/regExp.md)
