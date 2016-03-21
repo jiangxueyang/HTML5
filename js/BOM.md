@@ -40,8 +40,15 @@ BOW
     若输入框无内容，则返回null；若有内容，则返回消息。
 
 ###window对象常用事件
-+ onload() :页面资源全部加载完后触发这个方法
-+ onscroll():滚动窗口滚动条时触发 
++ onload :页面资源全部加载完后触发这个方法
+    防止window.onload覆盖，先取值，后赋值
+    var windowLoad = window.onload;
+    window.onload=function(){
+        //如果原来有绑定window.onload事件，则先执行
+        if(typeof window.onload==="function")
+            windowLoad();
+    }
++ onscroll:滚动窗口滚动条时触发 
     window.onscroll=document.onscroll=函数(滚动条条触发时执行函数)
 + scrollTop//scrollLeft
     标准：document.documentElement.scrollTop
@@ -50,8 +57,8 @@ BOW
     var scrolltop=document.documentElement.scrollTop || document.body.scrollTop
     设置返回滚动条滚动到的垂直位置（像素），若不支持则返回0 
     返回顶部：document.documentElement.scrollTop=0 || document.body.scrollTop=0 
-
-  
++ window.onresize  窗口大小改变时
+ 
 ###location
 
 ####location 属性与方法

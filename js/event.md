@@ -1,3 +1,4 @@
+
 事件
 ---
 ####事件绑定
@@ -56,6 +57,26 @@
     e.pageY= e.pageY || e.clientX+scrollTop;
 + screenX、screenY 鼠标相对于电脑屏幕的位置，用处不是很大
 + offsetX、offsetY 鼠标相对于事件源对象的偏移量
++ offsetTop、offsetLeft 当前元素相对离定位父级顶部/左侧的距离,    如果没有定位的父级，则相对于html的距离
++ clientLeft:元素的border-left;
+  clientTop:元素的border-top
+
+
+####元素的宽高
++ offsetWidth=元素的 width + padding + border
+  offsetHeight=元素的 height + padding + border
++ clientWidth=当前元素内容宽度(不包括padding和border)
+  clientHeight =当前元素的内容高度，同上
++ scrollTop:当前元素垂直滚动条滚动过的距离 
+    document.documentElement.scrollTop || document.body.scrollTop
++ scrollLeft:当前元素水平滚动条滚动过的距离
+    document.documentElement.scrollLeft || document.body.scrollLeft
++ scrollTo(x,y)将浏览器窗口滚动到x,y坐标
++ scrollIntoView()：一种方法，把当前元素滚动到可见区域 
++ scrollWidth:当前元素的内容宽度加上padding-left(不包括边框)
++ scrollHeight:当前元素的内容高度加上padding-top(不包括边框)
+
+
 
 
 ####事件冒泡

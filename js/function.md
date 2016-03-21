@@ -50,6 +50,13 @@
 * element.onclick=function(){函数1}（点击该项目时可触发函数1;函数1需要定义。）
 此做法是为了HTML、CSS、JS文件三者分离，方便进行维护。
 * 函数的声明会提前
+  例：
+  var a=10;
+  function test(){
+    alert(a)  ==>undefined
+    var a=11; =>相当于在函数开始先声明var a
+    alert(a)
+  }
 
  
 **函数参数**
@@ -96,5 +103,14 @@ f(n)=f(n-1)+f(n-2);
 
 **扩展**
 * JS执行为单线程，运算速度比较慢
+* function test(){
+      var a=b=c=10;
+      console.log(a,b,c)
+    }
+    test();//
+    console.log(a,b,c)//a is not defined
+    console.log(b,c)  //b、c此时为全局变量
+* 调试台进入某个函数里，按F11
+
 
     

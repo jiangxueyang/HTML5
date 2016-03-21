@@ -40,13 +40,22 @@ DOM
 2. 属性的修改(增加)：
     list[i]["属性"]="内容" || list[i].属性="内容"
 3. 节点的添加：
-    parent.appendChild() 向节点的子节点尾部添加一个新的子节点
-    parent.insertBefore(new,node) 在指定的子节点node前插入新的子节点new
+    parent.appendChild(node):
+    向节点的子节点尾部添加一个新的子节点，如果node为已存在的节点元素，则直接将node移动至最后。
+    parent.insertBefore(newNode,node): 
+    在指定的子节点node前插入新的子节点newNode
 
 4. 节点的新建：
     document.createElement("节点名/标签名"):创建一个元素节点
-5. 删除子节点：
+    document.createDocumentFragment() :创建文档碎片节点
+    用法：
+5. 删除子节点：  
     element.removeChild(指定的节点) 
+6. 复制节点
+    cloneNode(boolean):克隆节点
+    参数true表示同时克隆子节点
+
+
 
 ####获取节点关系
 + 获取子节点
@@ -86,3 +95,5 @@ DOM
 + **自定义属性**
   若要在标签中添加html原来不存在的属性，可使用data-属性名(必须以data-开头)
 + return false可阻止事件冒泡
++ console.time()用于标记时间开始
+  console.timeEnd()用于标记时间结束

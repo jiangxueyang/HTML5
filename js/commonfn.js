@@ -189,13 +189,44 @@ function animate(ele,opt,callback){
 	}
 }
 
+
+
+/*=====================================cookie=================================================*/
+
+//获取设置cookie
+function setCookie(name,value,expires,domain){
+	document.cookie = name+"="+value;
+	if(expires){
+		document.cookie  += ";expires=" + expires;
+	}
+	if(domain){
+		document.cookie  += ";domain=" + domain;
+	}
+}
+
+
+
 // 取cookie中的属性值 
-function cookieVal(cookie,attr){
+function getCookie(attr){
+	var cookie = document.cookie;
 	var cookies = cookie.split("; ");
 	var cookieObj = {};
 	for(var i=0;i<cookies.length;i++){
 		var _obj = cookies[i].split("=");
 		cookieObj[_obj[0]] = _obj[1];
 	}
+	return cookieObj[attr];
 
 }
+
+
+//删除cookie
+function removeCookie(name){
+	var now=new Date();
+	document.cookie = name + "=" + "0;expires=" + now; 
+}
+/*=====================================cookie over=================================================*/
+
+
+
+
