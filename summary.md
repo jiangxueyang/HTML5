@@ -13,3 +13,4 @@
 * [math](js/math.md)
 * [event](js/event.js)
 * [commonfn](js/commonfn.js)
+* [ajax](js/ajax.md)
